@@ -1,0 +1,99 @@
+/*------------------------
+Typography
+--------------------------*/
+h1,h2,h3,h4,h5,h6, p {
+  font-family: 'source sans Pro', sans-serif, Helvetica;
+  line-height: 1.5;
+}
+
+/*------------------------
+ability
+-------------------------*/
+.cards {
+  max-width: 25em;
+  margin:1em auto;
+  list-style-type: none;
+}
+.cards {
+  margin:0 auto;
+  padding:1em;
+}
+img {
+  display: block;
+  width: 100%;
+  border: 0;
+  height: auto;
+}
+.cards li a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1em;
+}
+.img-card {
+  padding: 1em;
+  font-size: 90%;
+  color:black;
+}
+.caption-title {
+	margin: 0;
+	font-size: 1.4em;
+	line-height: 1em;
+}
+
+.img-caption p {
+	margin-top: .5em;
+	margin-bottom: 0;
+}
+.cards a:focus .img-caption,
+.cards a:hover .img-caption {
+	background: hsl(0, 0%, 97%);
+}
+.img-caption {
+  padding: 1em;
+}
+/*------------------------
+Grid
+-------------------------*/
+@media screen and (min-width: 60em){
+  .cards {
+    max-width: none;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(2, 25em);
+    grid-gap: 1em;
+    justify-content: center;
+  }
+
+  .img-card {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 8em auto;
+  }
+
+  .card-big {
+    grid-row: span 3;
+  }
+  .card-big .img-card {
+    display:block;
+  }
+
+}
+
+@media screen and (min-width: 27em){
+  .cards {
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  .card {
+    margin: 1em 0;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 8em auto;
+  }
+
+  .cards a:focus,
+  .cards a:hover {
+    outline: 1px solid hsl(0, 0%, 80%);
+  }
+}
